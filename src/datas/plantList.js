@@ -20,6 +20,7 @@ export const plantList = [
 	},
 	{
 		name: 'ficus lyrata',
+
 		category: 'classique',
 		id: '2ab',
 		light: 3,
