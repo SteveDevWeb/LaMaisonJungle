@@ -26,6 +26,7 @@ export const plantList = [
 		water: 1,
 		cover: lyrata,
 		price: 16
+
 	},
 
 	{
