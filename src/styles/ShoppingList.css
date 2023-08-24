@@ -1,0 +1,17 @@
+.lmj-plant-list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+}
+
+.add-to-cart-button{
+	border-radius: 10px;
+	border: 2px solid #31b472;
+	background-color: transparent;
+	padding: 10px 20px;
+	cursor: pointer;
+	color: #31b472;
+	font-weight: 600;
+}

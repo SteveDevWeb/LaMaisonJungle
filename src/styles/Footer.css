@@ -1,0 +1,24 @@
+.lmj-footer {
+	color: black;
+	padding: 32px;
+	border-top: solid 3px black;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 500;
+}
+
+.lmj-footer-elem {
+	margin-bottom: 10px;
+}
+
+.newsletter-button{
+	background-color: #31b472;
+	border: 2px solid #31b472;
+	border-radius: 10px;
+	padding: 5px 20px 7px;
+	cursor: pointer;
+	font-weight: 600;
+	color:white;
+}
