@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Projet React La Maison Jungle
 
-Cliquez ici pour le découvrir :[La Maison Jungle](https://stevedevweb.github.io/LaMaisonJungle/).
+Cliquez ici pour le découvrir : [La Maison Jungle](https://stevedevweb.github.io/LaMaisonJungle/).
 
 ## Available Scripts
 
