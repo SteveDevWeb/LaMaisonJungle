@@ -33,7 +33,7 @@ function Cart({ cart, updateCart }) {
 					<h2>Panier</h2>
 					<ul>
 						{cart.map(({ name, price,cover, amount }, index) => (
-							<li key={`${name}-${index}`}>
+							<li key={`${name}-${index}`} className='lmj-cart-item'>
 								<img alt='' className='lmj-cart-img' src={cover}/>
 								<span> {name} </span> 
 								<span>| {price}€ </span> 

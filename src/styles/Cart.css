@@ -3,7 +3,7 @@ ul,li{
 	padding: 0;
 	list-style-type: none;
 }
-li{
+.lmj-cart-item{
 	display: flex;
 	align-items: center;
 	gap: 5px;

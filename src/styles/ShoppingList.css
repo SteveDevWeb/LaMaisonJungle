@@ -4,6 +4,9 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+.lmj-plant-list li {
+	position: relative;
+}
 
 .add-to-cart-button{
 	border-radius: 10px;
@@ -13,4 +16,16 @@
 	cursor: pointer;
 	color: #31b472;
 	font-weight: 600;
+}
+.more-infos{
+	position: absolute;
+	border:none;
+	border-radius: 20px 20px 0px 20px;
+	background-color: #31b472;
+	color: white;
+	padding: 15px;
+	left: 10px;
+	top: 10px;
+	font-weight: 500;
+	cursor: help;
 }

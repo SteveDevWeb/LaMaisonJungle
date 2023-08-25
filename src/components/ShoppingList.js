@@ -26,23 +26,52 @@ function ShoppingList({ cart, updateCart }) {
     const filteredPlant = selectedCategory==="All" ? plantList: plantList.filter(plant => plant.category === selectedCategory)
 
 
+	const [modalOpen,setModalOpen] = useState(false)
+
+	const [description,setDescription] = useState("")
+
+	const openModal = (description) => {
+		setModalOpen(true)
+		setDescription(description)
+
+	}
+	const closeModal = () => {
+		setModalOpen(false)
+	}
+
+	function Modal({modalOpen}) {
+		return(
+		modalOpen ? 
+		(<div className="modal">
+			<div className="modal-content">
+			<h2>Modal</h2>
+			<p>{description}</p>
+			<button onClick={closeModal}>Fermer</button>
+			</div>
+		</div>)
+		:null )
+	}
+
 
 	return (
 		<div className='lmj-shopping-list'>
 			<Categories selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
 			<ul className='lmj-plant-list'>
-				{filteredPlant.map(({ id, cover, name, water, light, price }) => (
-					<div key={id}>
+				{filteredPlant.map(({ id, cover, name, water, light, price,description }) => (
+					<li key={id}>
 						<PlantItem
 							cover={cover}
 							name={name}
 							water={water}
 							light={light}
 							price={price}
-						/><button className='add-to-cart-button' onClick={() => addToCart(name, price,cover)}> Ajouter</button>
-					</div>
+						/>
+						<button className='add-to-cart-button' onClick={() => addToCart(name, price,cover)}> Ajouter</button>
+						<button className='more-infos' onClick={() => openModal(description)}>?</button>
+					</li>
 				))}
 			</ul>
+			<Modal modalOpen={modalOpen}/>
 		</div>
 	)
 }
