@@ -2,6 +2,10 @@
 
 Cliquez ici pour le découvrir : [La Maison Jungle](https://stevedevweb.github.io/LaMaisonJungle/).
 
+## Notions étudiées 
+
+UseState, UseEffect, Props
+
 ## Available Scripts
 
 In the project directory, you can run:
