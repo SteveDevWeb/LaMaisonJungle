@@ -40,8 +40,10 @@ ul,li{
 }
 
 .lmj-cart-closed {
-	padding: 32px;
-	width: 300px;
+	position: relative;
+    top: 20px;
+    left: 20px;
+	width: 0;
 }
 
 .lmj-cart-closed > button {
@@ -49,6 +51,7 @@ ul,li{
 	border-radius: 10px;
 	border: 1px black solid;
 	padding: 10px 20px;
+	width: 104px;
 }
 .lmj-cart > button {
 	border-radius: 10px;
