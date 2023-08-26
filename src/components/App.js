@@ -15,6 +15,8 @@ const App = () => {
 		localStorage.setItem('Cart', JSON.stringify(cart))
 	}, [cart])
 	
+
+
 	return (
 		<div>
 			<Banner>

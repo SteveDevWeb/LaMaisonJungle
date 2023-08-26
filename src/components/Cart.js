@@ -12,6 +12,12 @@ function Cart({ cart, updateCart }) {
 		0
 	)
 
+	const totalAmount = cart.reduce(
+		(acc, plantType) => acc + plantType.amount,
+		0
+	)
+
+
 	useEffect(() => {
 		document.title = `Panier: ${total}€ `;
 	}, [total])
@@ -55,6 +61,7 @@ function Cart({ cart, updateCart }) {
 				onClick={() => setIsOpen(true)}
 			>
 				Panier 🛒
+				<span className='lmj-total-amount'>{totalAmount}</span>
 			</button>
 		</div>
 	)
