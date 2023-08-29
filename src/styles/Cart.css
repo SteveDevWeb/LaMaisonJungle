@@ -19,8 +19,21 @@ ul,li{
 	flex-direction: column;
 	justify-content: flex-start;
 	min-width: 230px;
-
+	animation:.5s apparition ;
 }
+
+
+@keyframes apparition {
+	from {
+		transform:translate(-294px,0px);
+	}
+
+	to {
+		transform:translate(0px,0px);
+	}
+}
+
+
 
 .lmj-cart-add-button {
 	margin-left: 32px;
@@ -48,7 +61,7 @@ ul,li{
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
-	font-size: 10px;
+	font-size: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

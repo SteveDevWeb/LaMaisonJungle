@@ -16,16 +16,17 @@
 	cursor: pointer;
 	color: #31b472;
 	font-weight: 600;
+	margin:0 0 10px 10px;
 }
 .more-infos{
 	position: absolute;
-	border:none;
-	border-radius: 20px 20px 0px 20px;
-	background-color: #31b472;
-	color: white;
-	padding: 15px;
-	left: 10px;
-	top: 10px;
-	font-weight: 500;
-	cursor: help;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    background-color: #20784a;
+    color: white;
+    padding: 10px 15px;
+    right: 10px;
+    top: 195px;
+    font-weight: 500;
+    cursor: help;
 }

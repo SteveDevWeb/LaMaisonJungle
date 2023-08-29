@@ -9,16 +9,23 @@ function ShoppingList({ cart, updateCart }) {
 
 	/* Add to Cart function */
 	function addToCart(name, price, cover) {
+		// On cherche la plante si elle est dans cart, le panier actuel
 		const currentPlantSaved = cart.find((plant) => plant.name === name)
+		// Si la plante est deja dans le panier
 		if (currentPlantSaved) {
+			// On creer temporairement un tableau SANS la plante actuelle
 			const cartFilteredCurrentPlant = cart.filter(
 				(plant) => plant.name !== name
 			)
+			//On met a jour cart, en se basant sur le panier temporaire ,en ajoutant la nouvelle plant avec amount + 1 
 			updateCart([
 				...cartFilteredCurrentPlant,
 				{ name, price,cover, amount: currentPlantSaved.amount + 1 }
 			])
-		} else {
+
+		} 
+		// Si la plante n'est pas dans le panier, on l'ajoute simplement a cart en tant que nouvel objet et amount = 1
+		else {
 			updateCart([...cart, { name, price,cover, amount: 1 }])
 		}
 	}
@@ -58,7 +65,7 @@ function ShoppingList({ cart, updateCart }) {
 							price={price}
 						/>
 						<button className='add-to-cart-button' onClick={() => addToCart(name, price,cover)}> Ajouter</button>
-						<button className='more-infos' onClick={() => openModal(description,name)}>?</button>
+						<button className='more-infos' onClick={() => openModal(description,name)}>Découvrir</button>
 					</li>
 				))}
 			</ul>
