@@ -3,10 +3,11 @@ import PlantItem from './PlantItem'
 import '../styles/ShoppingList.css'
 import Categories from './Categories'
 import { useState } from 'react'
+import Modal from './Modal'
 
 function ShoppingList({ cart, updateCart }) {
 
-
+	/* Add to Cart function */
 	function addToCart(name, price, cover) {
 		const currentPlantSaved = cart.find((plant) => plant.name === name)
 		if (currentPlantSaved) {
@@ -22,35 +23,25 @@ function ShoppingList({ cart, updateCart }) {
 		}
 	}
 
+	/* Categories */
 	const [selectedCategory, setSelectedCategory] = useState("All");
     const filteredPlant = selectedCategory==="All" ? plantList: plantList.filter(plant => plant.category === selectedCategory)
 
 
+
+	/* Modal */
 	const [modalOpen,setModalOpen] = useState(false)
 
 	const [description,setDescription] = useState("")
+	const [name,setName] = useState("")
 
-	const openModal = (description) => {
+	const openModal = (description,name) => {
 		setModalOpen(true)
 		setDescription(description)
+		setName(name)
+	}
+	
 
-	}
-	const closeModal = () => {
-		setModalOpen(false)
-	}
-
-	function Modal({modalOpen}) {
-		return(
-		modalOpen ? 
-		(<div className="modal">
-			<div className="modal-content">
-			<h2>Modal</h2>
-			<p>{description}</p>
-			<button onClick={closeModal}>Fermer</button>
-			</div>
-		</div>)
-		:null )
-	}
 
 
 	return (
@@ -67,11 +58,11 @@ function ShoppingList({ cart, updateCart }) {
 							price={price}
 						/>
 						<button className='add-to-cart-button' onClick={() => addToCart(name, price,cover)}> Ajouter</button>
-						<button className='more-infos' onClick={() => openModal(description)}>?</button>
+						<button className='more-infos' onClick={() => openModal(description,name)}>?</button>
 					</li>
 				))}
 			</ul>
-			<Modal modalOpen={modalOpen}/>
+			<Modal modalOpen={modalOpen} setModalOpen={setModalOpen} description={description} name={name}/>
 		</div>
 	)
 }
