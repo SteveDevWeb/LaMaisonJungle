@@ -6,6 +6,7 @@ import Footer from './Footer'
 import ShoppingList from './ShoppingList'
 import '../styles/Layout.css'
 
+
 const App = () => {
 	
 	const savedCart = localStorage.getItem('Cart')
